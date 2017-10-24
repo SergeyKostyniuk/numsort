@@ -4,13 +4,13 @@ package com.example.Numbers.service;
 import com.example.Numbers.model.NumModel;
 import org.springframework.stereotype.Service;
 
+
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
 @Service
 public class NumService {
-
-    public void  NumService(String str) {
+    public IntStream sort(String str) {
         NumModel numModel = new NumModel();
         numModel.setId(0L);
         numModel.setStr(str);
@@ -24,6 +24,6 @@ public class NumService {
                         .allMatch(n -> x % n != 0))
                 .sorted();
 
-
+            return statistics;
     }
 }

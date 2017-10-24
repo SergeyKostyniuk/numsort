@@ -19,7 +19,7 @@ public class NumController {
 
     @RequestMapping(path = "/sort", method = RequestMethod.GET)
     public @ResponseBody
-    IntStream sort (String str) {
-        return (IntStream) numService;
+    IntStream sort(String str) {
+        return numService.sort(str);
     }
 }
